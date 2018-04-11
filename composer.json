@@ -1,0 +1,20 @@
+{
+    "name": "ecs/fancybox2oxid",
+    "description": "ECS Fancybox Module for OXID eShop 6",
+    "type": "oxideshop-module",
+    "keywords": ["ecs", "ecomstyle", "ecomstyle.de"],
+    "homepage": "https://ecomstyle.de/",
+    "license": [
+        "GNU"
+    ],
+    "extra": {
+        "oxideshop": {
+            "target-directory": "ecs/Fancybox2Oxid"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ecs\\Fancybox2Oxid\\": "../../../source/modules/ecs/Fancybox2Oxid"
+        }
+    }
+}
