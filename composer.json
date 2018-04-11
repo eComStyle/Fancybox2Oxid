@@ -2,10 +2,10 @@
     "name": "ecs/fancybox2oxid",
     "description": "ECS Fancybox Module for OXID eShop 6",
     "type": "oxideshop-module",
-    "keywords": ["ecs", "ecomstyle", "ecomstyle.de"],
+    "keywords": ["oxid", "lightbox", "ecomstyle.de"],
     "homepage": "https://ecomstyle.de/",
     "license": [
-        "GNU"
+        "GPL-3.0-only"
     ],
     "extra": {
         "oxideshop": {
