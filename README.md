@@ -3,7 +3,7 @@ eComStyle.de::Fancybox2Oxid
 
 Modulversion
 ------------
-1.2
+1.2.1
 
 Shopversionen
 -------------

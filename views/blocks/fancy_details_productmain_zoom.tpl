@@ -31,8 +31,8 @@
         [{if $oConf->getConfigParam('sAltImageUrl') || $oConf->getConfigParam('sSSLAltImageUrl')}]
             [{assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl(1)|@getimagesize}]
         [{else}]
-            [{assign var="sPictureName" value=$oPictureProduct->oxarticles__oxpic1->value}]
-            [{assign var="aPictureInfo" value=$oConf->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
+            [{assign var="sPictureName" value=$oPictureProduct->getPictureFieldValue("oxpic", $iPicNr)}]
+            [{assign var="aPictureInfo" value=$oConfig->getMasterPicturePath("product/`$iPicNr`/`$sPictureName`")|@getimagesize}]
         [{/if}]
         [{assign var="aNoZoomPictureInfo" value=$oView->getActPicture()|@getimagesize}]
         <a href="[{$oPictureProduct->getMasterZoomPictureUrl(1)}]" id="fancyid_1"[{if $aPictureInfo}] data-width="[{$aPictureInfo.0}]" data-height="[{$aPictureInfo.1}]"[{/if}] data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox">
@@ -47,7 +47,7 @@
 [{/if}]
 [{*********************Tumbnails*********************************** *}]
 [{if $oView->morePics()}]
-    [{assign var="pictureCount" value=$oView->getIcons()|@count}]
+    [{assign var="pictureCount"  value=$oView->getIcons()|@count}]
     [{if $pictureCount == "2"}]     [{assign var="col" value="5"}]
     [{elseif $pictureCount eq "3"}] [{assign var="col" value="4"}]
     [{elseif $pictureCount eq "4"}] [{assign var="col" value="3"}]
@@ -59,9 +59,9 @@
     <div class="hidden-print clearfix clear fancymorepics">
         [{foreach from=$oView->getIcons() key=iPicNr item=oArtIcon name=sMorePics}]
             [{if $iPicNr == 8}]<div class="clearfix"></div>[{/if}]
-            [{if $iPicNr !=1 }]
-                <div class="[{if $iPicNr ==2 }]col-xs-offset-[{$col}] [{/if}]col-lg-2 col-md-2] col-sm-2 col-xs-2">
-                    <a href="[{$oPictureProduct->getMasterZoomPictureUrl($iPicNr)}]" title="[{$ArticlesTitle|strip_tags}]" data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox">
+            [{if $iPicNr !=1}]
+                <div class="[{if $iPicNr ==2 }]col-xs-offset-[{$col}] [{/if}]col-lg-2 col-md-2] col-sm-2 col-xs-2" style="padding:3px">
+                    <a href="[{$oPictureProduct->getMasterZoomPictureUrl($iPicNr)}]" title="[{$ArticlesTitle|strip_tags}]" data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox thumbnail">
                         <img src="[{$oPictureProduct->getIconUrl($iPicNr)}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-responsive center-block">
                     </a>
                 </div>
