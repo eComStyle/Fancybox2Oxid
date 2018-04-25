@@ -1,10 +1,6 @@
 eComStyle.de::Fancybox2Oxid
 ===========================
 
-Modulversion
-------------
-1.2.1
-
 Shopversionen
 -------------
 OXID eShop CE/PE 6.0.
