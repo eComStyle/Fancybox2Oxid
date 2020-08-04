@@ -23,7 +23,7 @@ $aModule            = [
     'title'         => '<strong style="color:#04B431;">e</strong><strong>ComStyle.de</strong>:  <i>Fancybox2Oxid</i>',
     'description'   => 'Integriert die FancyBox³ im OXID eShop 6! Yeah!<br>
                        Aber werfen Sie bitte auch einen Blick auf die <a href="http://fancyapps.com/fancybox/3/#license" target="_blank"><u>Lizenz</u></a>.',
-    'version'       => '1.2.3',
+    'version'       => '1.2.4',
     'thumbnail'     => 'ecs.png',
     'author'        => '<strong style="font-size: 17px;color:#04B431;">e</strong><strong style="font-size: 16px;">ComStyle.de</strong>',
     'email'         => 'info@ecomstyle.de',

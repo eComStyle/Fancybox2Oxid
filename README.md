@@ -3,7 +3,7 @@ eComStyle.de::Fancybox2Oxid
 
 Shopversionen
 -------------
-OXID eShop CE/PE 6.0.
+OXID eShop CE/PE 6  
 
 Installation
 ------------
