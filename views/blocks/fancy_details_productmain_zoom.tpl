@@ -24,22 +24,24 @@
     [{oxscript add="$( document ).ready( function() { Flow.initEvents();});"}]
 [{/if}]
 [{* ############################################################################################################### *}]
-[{assign var="oConf" value=$oViewConf->getConfig()}]
+[{if !isset($oConfig)}]
+    [{assign var="oConfig" value=$oViewConf->getConfig()}]
+[{/if}]
 [{assign var="ArticlesTitle" value="`$oPictureProduct->oxarticles__oxtitle->value` `$oPictureProduct->oxarticles__oxvarselect->value`"}]
 <div class="fancymasterpic picture" id="FancyPicsContainer">
     [{if $oView->showZoomPics()}]
-        [{if $oConf->getConfigParam('sAltImageUrl') || $oConf->getConfigParam('sSSLAltImageUrl')}]
+        [{if $oConfig->getConfigParam('sAltImageUrl') || $oConfig->getConfigParam('sSSLAltImageUrl')}]
             [{assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl(1)|@getimagesize}]
         [{else}]
             [{assign var="sPictureName" value=$oPictureProduct->getPictureFieldValue("oxpic", $iPicNr)}]
-            [{assign var="aPictureInfo" value=$oConfig->getMasterPicturePath("product/`$iPicNr`/`$sPictureName`")|@getimagesize}]
+            [{assign var="aPictureInfo" value=$oConfigig->getMasterPicturePath("product/`$iPicNr`/`$sPictureName`")|@getimagesize}]
         [{/if}]
         [{assign var="aNoZoomPictureInfo" value=$oView->getActPicture()|@getimagesize}]
         <a href="[{$oPictureProduct->getMasterZoomPictureUrl(1)}]" id="fancyid_1"[{if $aPictureInfo}] data-width="[{$aPictureInfo.0}]" data-height="[{$aPictureInfo.1}]"[{/if}] data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox">
-            <img src="[{$oView->getActPicture()}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-responsive center-block"[{if $aNoZoomPictureInfo}] width="[{$aNoZoomPictureInfo.0}]" height="[{$aNoZoomPictureInfo.1}]"[{/if}]>
+            <img src="[{$oView->getActPicture()}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-responsive center-block"[{if $aNoZoomPictureInfo}] width="[{$aNoZoomPictureInfo.0}]" height="[{$aNoZoomPictureInfo.1}]"[{/if}] itemprop="image">
         </a>
     [{else}]
-        <img src="[{$oView->getActPicture()}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-responsive center-block"/>
+        <img src="[{$oView->getActPicture()}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-responsive center-block" itemprop="image">
     [{/if}]
 </div>
 [{if $oView->showZoomPics()}]

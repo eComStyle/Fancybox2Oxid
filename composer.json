@@ -4,7 +4,7 @@
     "type": "oxideshop-module",
     "keywords": ["oxid", "lightbox", "ecomstyle.de"],
     "homepage": "https://ecomstyle.de/",
-    "version": "1.2.2",    
+    "version": "1.2.3",    
     "license": [
         "GPL-3.0-only"
     ],

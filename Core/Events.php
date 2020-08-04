@@ -1,5 +1,4 @@
 <?php
-
 /*    Please retain this copyright header in all versions of the software
  *
  *    Copyright (C) Josef A. Puckl | eComStyle.de
@@ -17,13 +16,13 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
+
 namespace Ecs\Fancybox2Oxid\Core;
 
 use \OxidEsales\Eshop\Core\Registry;
 
 class Events
 {
-
     public static function clearTmp($sClearFolderPath = '')
     {
         $sFolderPath = self::_getFolderToClear($sClearFolderPath);

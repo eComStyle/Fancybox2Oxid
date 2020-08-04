@@ -18,16 +18,18 @@
  */
 *}]
 [{$smarty.block.parent}]
-[{assign var="oConf" value=$oViewConf->getConfig()}]
-[{assign var="ecs_fancy_jslink" value=$oConf->getConfigParam('ecs_fancy_jslink')}]
-[{assign var="fancyclasses" value=$oConf->getConfigParam('ecs_fancy_classes')}]
+[{if !isset($oConfig)}]
+    [{assign var="oConfig" value=$oViewConf->getConfig()}]
+[{/if}]
+[{assign var="ecs_fancy_jslink" value=$oConfig->getConfigParam('ecs_fancy_jslink')}]
+[{assign var="fancyclasses" value=$oConfig->getConfigParam('ecs_fancy_classes')}]
 [{foreach from=$fancyclasses item=fancyclass}]
     [{if $oView->getClassName() eq $fancyclass}]
         [{oxscript include=$ecs_fancy_jslink priority=10 }]
         [{capture assign=fancyload}]
             $(document).ready(function() {
                 $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.png'],a[href$='.gif']").attr('data-fancybox', 'articlemain').addClass('fancybox').fancybox();
-                [{if $oConf->getConfigParam('ecs_fancy_ful') }]
+                [{if $oConfig->getConfigParam('ecs_fancy_ful') }]
                     $('[data-fancybox="articlemain"]').fancybox({fullScreen : {autoStart : true}});
                 [{/if}]
                 $.fancybox.defaults.hash = false;
