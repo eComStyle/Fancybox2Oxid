@@ -34,7 +34,7 @@
             [{assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl(1)|@getimagesize}]
         [{else}]
             [{assign var="sPictureName" value=$oPictureProduct->getPictureFieldValue("oxpic", $iPicNr)}]
-            [{assign var="aPictureInfo" value=$oConfigig->getMasterPicturePath("product/`$iPicNr`/`$sPictureName`")|@getimagesize}]
+            [{assign var="aPictureInfo" value=$oConfig->getMasterPicturePath("product/`$iPicNr`/`$sPictureName`")|@getimagesize}]
         [{/if}]
         [{assign var="aNoZoomPictureInfo" value=$oView->getActPicture()|@getimagesize}]
         <a href="[{$oPictureProduct->getMasterZoomPictureUrl(1)}]" id="fancyid_1"[{if $aPictureInfo}] data-width="[{$aPictureInfo.0}]" data-height="[{$aPictureInfo.1}]"[{/if}] data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox">
