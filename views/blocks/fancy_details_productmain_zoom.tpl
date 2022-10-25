@@ -62,9 +62,9 @@
         [{foreach from=$oView->getIcons() key=iPicNr item=oArtIcon name=sMorePics}]
             [{if $iPicNr == 8}]<div class="clearfix"></div>[{/if}]
             [{if $iPicNr !=1}]
-                <div class="[{if $iPicNr ==2 }]col-xs-offset-[{$col}] [{/if}]col-lg-2 col-md-2] col-sm-2 col-xs-2" style="padding:3px">
-                    <a href="[{$oPictureProduct->getMasterZoomPictureUrl($iPicNr)}]" title="[{$ArticlesTitle|strip_tags}]" data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox thumbnail">
-                        <img src="[{$oPictureProduct->getIconUrl($iPicNr)}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-responsive center-block">
+                <div class="[{if $iPicNr ==2 }]col-xs-offset-[{$col}] [{/if}]col-lg-2 col-md-2] col-sm-2 col-xs-2 float-left" style="padding:3px">
+                    <a href="[{$oPictureProduct->getMasterZoomPictureUrl($iPicNr)}]" title="[{$ArticlesTitle|strip_tags}]" data-caption="[{$ArticlesTitle|strip_tags}]" data-fancybox="articlemain" class="fancybox">
+                        <img src="[{$oPictureProduct->getIconUrl($iPicNr)}]" alt="[{$ArticlesTitle|strip_tags}]" class="img-thumbnail center-block">
                     </a>
                 </div>
             [{/if}]
