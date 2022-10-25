@@ -17,8 +17,8 @@
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
-$sLangName = "Deutsch";
-$aLang = array(
+$sLangName = 'Deutsch';
+$aLang = [
     'charset'       => 'UTF-8',
     'ECSKLICKIT'    => 'Zum Vergrößern in das Bild klicken',
-);
+];

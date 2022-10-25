@@ -17,13 +17,13 @@
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
-$sLangName  = "English";
-$aLang = array(
-'charset'                               => 'UTF-8',
-'SHOP_MODULE_GROUP_ecs_main'            => 'Settings',
-'SHOP_MODULE_ecs_fancy_css'    		    => 'Deaktivate CSS integration -do it yourself!',
-'SHOP_MODULE_ecs_fancy_ful'    		    => 'Fullscreen-Mode.',
-'SHOP_MODULE_ecs_fancy_classes'         => 'These OXID-classes use the Fancybox. One per line!',
-'SHOP_MODULE_ecs_fancy_jslink'          => 'Link to JS-file, <a href="https://cdnjs.com/libraries/fancybox" target="_blank"><u>Example</u></a>',
-'SHOP_MODULE_ecs_fancy_csslink'         => 'Link to CSS-file',
-);
+$sLangName = 'English';
+$aLang = [
+    'charset'                               => 'UTF-8',
+    'SHOP_MODULE_GROUP_ecs_main'            => 'Settings',
+    'SHOP_MODULE_ecs_fancy_css'    		       => 'Deaktivate CSS integration -do it yourself!',
+    'SHOP_MODULE_ecs_fancy_ful'    		       => 'Fullscreen-Mode.',
+    'SHOP_MODULE_ecs_fancy_classes'         => 'These OXID-classes use the Fancybox. One per line!',
+    'SHOP_MODULE_ecs_fancy_jslink'          => 'Link to JS-file, <a href="https://cdnjs.com/libraries/fancybox" target="_blank"><u>Example</u></a>',
+    'SHOP_MODULE_ecs_fancy_csslink'         => 'Link to CSS-file',
+];

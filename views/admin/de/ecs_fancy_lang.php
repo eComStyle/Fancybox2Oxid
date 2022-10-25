@@ -17,13 +17,13 @@
  *    along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
-$sLangName  = "German";
-$aLang = array(
-'charset'                               => 'UTF-8',
-'SHOP_MODULE_GROUP_ecs_main'            => 'Grundeinstellungen',
-'SHOP_MODULE_ecs_fancy_css'    		    => 'CSS selbst im Shoptheme integrieren.',
-'SHOP_MODULE_ecs_fancy_ful'    		    => 'Im Fullscreen-Modus starten.',
-'SHOP_MODULE_ecs_fancy_classes'         => 'In diesen OXID-Klassen wird die Fancybox genutzt. Eine je Zeile!',
-'SHOP_MODULE_ecs_fancy_jslink'          => 'Link zur JS-Datei, <a href="https://cdnjs.com/libraries/fancybox" target="_blank"><u>Beispiele</u></a>',
-'SHOP_MODULE_ecs_fancy_csslink'         => 'Link zur CSS-Datei',
-);
+$sLangName = 'German';
+$aLang = [
+    'charset'                               => 'UTF-8',
+    'SHOP_MODULE_GROUP_ecs_main'            => 'Grundeinstellungen',
+    'SHOP_MODULE_ecs_fancy_css'    		       => 'CSS selbst im Shoptheme integrieren.',
+    'SHOP_MODULE_ecs_fancy_ful'    		       => 'Im Fullscreen-Modus starten.',
+    'SHOP_MODULE_ecs_fancy_classes'         => 'In diesen OXID-Klassen wird die Fancybox genutzt. Eine je Zeile!',
+    'SHOP_MODULE_ecs_fancy_jslink'          => 'Link zur JS-Datei, <a href="https://cdnjs.com/libraries/fancybox" target="_blank"><u>Beispiele</u></a>',
+    'SHOP_MODULE_ecs_fancy_csslink'         => 'Link zur CSS-Datei',
+];
